@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.uhope.rl.wechat.mapper.WxMaterialFileMapper">
+  <resultMap id="BaseResultMap" type="com.uhope.rl.wechat.domain.WxMaterialFile">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="mediaid" jdbcType="VARCHAR" property="mediaid" />
+    <result column="APPID" jdbcType="VARCHAR" property="appid" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="updatetime" jdbcType="TIMESTAMP" property="updatetime" />
+    <result column="videotitle" jdbcType="VARCHAR" property="videotitle" />
+    <result column="videointroduction" jdbcType="VARCHAR" property="videointroduction" />
+    <result column="url" jdbcType="LONGVARCHAR" property="url" />
+    <result column="dfsUrl" jdbcType="VARCHAR" property="dfsUrl" />
+  </resultMap>
+</mapper>

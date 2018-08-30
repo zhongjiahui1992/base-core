@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.uhope.rl.wechat.mapper.WxMassMessageMapper">
+  <resultMap id="BaseResultMap" type="com.uhope.rl.wechat.domain.WxMassMessage">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="APPID" jdbcType="VARCHAR" property="appid" />
+    <result column="toUserName" jdbcType="VARCHAR" property="tousername" />
+    <result column="fromUserName" jdbcType="VARCHAR" property="fromusername" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="totalCount" jdbcType="INTEGER" property="totalcount" />
+    <result column="filterCount" jdbcType="INTEGER" property="filtercount" />
+    <result column="sentCount" jdbcType="INTEGER" property="sentcount" />
+    <result column="errorCount" jdbcType="INTEGER" property="errorcount" />
+    <result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
+  </resultMap>
+</mapper>

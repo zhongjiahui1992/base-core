@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.uhope.rl.wechat.mapper.WxBindInfoMapper">
+  <resultMap id="BaseResultMap" type="com.uhope.rl.wechat.domain.WxBindInfo">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="wxname" jdbcType="VARCHAR" property="wxname" />
+    <result column="wxoriginalid" jdbcType="VARCHAR" property="wxoriginalid" />
+    <result column="wxappid" jdbcType="VARCHAR" property="wxappid" />
+    <result column="wxappsecret" jdbcType="VARCHAR" property="wxappsecret" />
+    <result column="wxtoken" jdbcType="VARCHAR" property="wxtoken" />
+    <result column="wxaeskey" jdbcType="VARCHAR" property="wxaeskey" />
+    <result column="iscurrent" jdbcType="INTEGER" property="iscurrent" />
+    <result column="bindtime" jdbcType="TIMESTAMP" property="bindtime" />
+    <result column="wxkey" jdbcType="VARCHAR" property="wxkey" />
+    <result column="basedomain" jdbcType="VARCHAR" property="basedomain" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.uhope.uip.mybatis.mapper.WxAutoReplyMapper">
+  <resultMap id="BaseResultMap" type="com.uhope.rl.wechat.domain.WxAutoReply">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="appid" jdbcType="VARCHAR" property="appid" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="keyword" jdbcType="VARCHAR" property="keyword" />
+    <result column="content" jdbcType="VARCHAR" property="content" />
+    <result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="mode" jdbcType="INTEGER" property="mode" />
+    <result column="replytype" jdbcType="VARCHAR" property="replytype" />
+  </resultMap>
+</mapper>

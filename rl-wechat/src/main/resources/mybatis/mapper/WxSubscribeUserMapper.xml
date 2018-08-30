@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.uhope.rl.wechat.mapper.WxSubscribeUserMapper">
+  <resultMap id="BaseResultMap" type="com.uhope.rl.wechat.domain.WxSubscribeUser">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="APPID" jdbcType="VARCHAR" property="appid" />
+    <result column="openid" jdbcType="VARCHAR" property="openid" />
+    <result column="nickname" jdbcType="VARCHAR" property="nickname" />
+    <result column="subscribe" jdbcType="INTEGER" property="subscribe" />
+    <result column="sex" jdbcType="INTEGER" property="sex" />
+    <result column="language" jdbcType="VARCHAR" property="language" />
+    <result column="city" jdbcType="VARCHAR" property="city" />
+    <result column="province" jdbcType="VARCHAR" property="province" />
+    <result column="country" jdbcType="VARCHAR" property="country" />
+    <result column="headimgurl" jdbcType="VARCHAR" property="headimgurl" />
+    <result column="subscribe_time" jdbcType="TIMESTAMP" property="subscribeTime" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="groupid" jdbcType="INTEGER" property="groupid" />
+    <result column="isblack" jdbcType="INTEGER" property="isblack" />
+    <result column="tagids" jdbcType="VARCHAR" property="tagids" />
+  </resultMap>
+
+  <sql id="sql_condition">
+   <!--   <if test="condition.APPID != null">and APPID = #{condition.APPID}</if>
+      <if test="condition.subscribe_time != null">and subscribe_time = #{condition.subscribe_time}</if>
+      <if test="condition.openid != null">and openid = #{condition.openid}</if>
+      <if test="condition.nickname != null">and nickname = #{condition.nickname}</if>
+      <if test="condition.sex != null">and sex = #{condition.sex}</if>
+      <if test="condition.language != null">and language = #{condition.language}</if>
+      <if test="condition.city != null">and city = #{condition.city}</if>
+      <if test="condition.province != null">and province = #{condition.province}</if>
+      <if test="condition.country != null">and country = #{condition.country}</if>
+      <if test="condition.headimgurl != null">and headimgurl = #{condition.headimgurl}</if>
+      <if test="condition.subscribe != null">and subscribe = #{condition.subscribe}</if>
+      <if test="condition.remark != null">and remark = #{condition.remark}</if>
+      <if test="condition.groupid != null">and groupid = #{condition.groupid}</if>
+      <if test="condition.isblack != null">and isblack = #{condition.isblack}</if>
+      <if test="condition.tagids != null">and tagids = #{condition.tagids}</if>-->
+      <if test="subscribe_time != null">and DATE(subscribe_time) = #{subscribe_time}</if>
+  </sql>
+
+  <select id="aggregate" parameterType="java.util.Map" resultType="java.util.HashMap">
+    SELECT ${aggregate_sql} FROM wx_subscribe_user
+    <trim prefix="WHERE" prefixOverrides="AND">
+      <include refid="sql_condition" />
+      And appid = #{appID}
+    </trim>
+  </select>
+
+</mapper>

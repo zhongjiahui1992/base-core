@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.uhope.rl.wechat.mapper.WxTemplateUserMapper">
+  <resultMap id="BaseResultMap" type="com.uhope.rl.wechat.domain.WxTemplateUser">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="MSGID" jdbcType="VARCHAR" property="msgid" />
+    <result column="TOUSER" jdbcType="VARCHAR" property="touser" />
+    <result column="BACKID" jdbcType="VARCHAR" property="backid" />
+    <result column="STATUS" jdbcType="VARCHAR" property="status" />
+    <result column="UPDATETIME" jdbcType="TIMESTAMP" property="updatetime" />
+  </resultMap>
+</mapper>
